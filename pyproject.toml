@@ -1,0 +1,15 @@
+[project]
+name = "sentiment-api"
+version = "0.1.0"
+description = "Simple text sentiment API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.6",
+    "transformers[torch]>=4.47.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
