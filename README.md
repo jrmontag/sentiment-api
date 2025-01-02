@@ -38,6 +38,7 @@ flyctl deploy   # subsequent app/config changes
 Use the OpenAPI request interface at `/docs`, or construct an artisan `curl` request:
 
 ```shell
+# request
 curl -X 'POST' \
   'http://127.0.0.1:8000/predict' \
   -H 'accept: application/json' \
@@ -45,6 +46,17 @@ curl -X 'POST' \
   -d '{
   "text": "this is a test bit of text for sentiment inference"
 }'
+
+# response
+{
+  "input": "this is a test bit of text for sentiment inference",
+  "result": [
+    {
+      "label": "NEGATIVE",
+      "score": 0.9675583243370056
+    }
+  ]
+}
 ```
 
 
